@@ -22,9 +22,28 @@ export default function BreathingApp() {
     }
   };
 
+  useEffect(() => {
+    let intervalId;
+
+    if (isRunning && timeLeft > 0) {
+      intervalId = setInterval(() => {
+        setTimeLeft(timeLeft - 1);
+      }, 1000);
+    }
+
+    if (timeLeft === 0) {
+      handleChangePhase();
+    }
+
+    return () => clearInterval(intervalId);
+  }, [isRunning, timeLeft]);
+
   return (
     <div>
-      <h1>Breathing App Test</h1>
+      <h2>{currentPhase}</h2>
+      <p>{timeLeft}</p>
+      <button onClick={handleStartStop}>{isRunning ? "Stop" : "Start"}</button>
+      <button onClick={handleChangePhase}>Change Phase</button>
     </div>
   );
 }
