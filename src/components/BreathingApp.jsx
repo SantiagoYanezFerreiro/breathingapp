@@ -39,11 +39,15 @@ export default function BreathingApp() {
   }, [isRunning, timeLeft]);
 
   return (
-    <div>
+    <div className="container">
       <h2>{currentPhase}</h2>
       <p>{timeLeft}</p>
-      <button onClick={handleStartStop}>{isRunning ? "Stop" : "Start"}</button>
-      <button onClick={handleChangePhase}>Change Phase</button>
+      <div className="button-group">
+        <button onClick={handleStartStop}>
+          {isRunning ? "Stop" : "Start"}
+        </button>
+        <button onClick={handleChangePhase}>Change Phase</button>
+      </div>
     </div>
   );
 }
