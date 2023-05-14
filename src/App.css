@@ -25,7 +25,7 @@ p {
 }
 
 button {
-  background-color: #4caf50;
+  background-color: #b8a99a;
   padding: 5px;
   font-size: 20px;
   cursor: pointer;
@@ -46,7 +46,7 @@ button:active {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  background-color: #4caf50;
+  background-color: #b8a99a;
   animation-duration: 4s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
