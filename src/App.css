@@ -130,5 +130,27 @@ button:active {
 .navbar-link:hover {
   color: #555;
 }
-/*
-*/
+
+.program-selection {
+  text-align: center;
+}
+
+.program-heading {
+  margin-bottom: 20px;
+}
+
+.program-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.program-item {
+  background-color: #f2f2f2;
+  list-style: none;
+  padding: 10px 10px;
+  height: 30vh;
+  margin: 20px;
+}
+
+.program-link {
+}

@@ -31,25 +31,25 @@ function App() {
 
   const ProgramSelection = () => (
     <div className="program-selection">
-      <h2>Programs Available</h2>
-      <ul className="program-list">
+      <h2 className="program-heading">Programs Available</h2>
+      <ul className="program-grid">
         <li className="program-item">
-          <Link to="/breathingprogram1" className="navbar-link">
+          <Link to="/breathingprogram1" className="program-link">
             BreathingProgram1
           </Link>
         </li>
-        <li className="navbar-item">
-          <Link to="/breathingprogram2" className="navbar-link">
+        <li className="program-item">
+          <Link to="/breathingprogram2" className="program-link">
             BreathingProgram2
           </Link>
         </li>
         <li className="program-item">
-          <Link to="/breathingprogram3" className="navbar-link">
+          <Link to="/breathingprogram3" className="program-link">
             BreathingProgram3
           </Link>
         </li>
         <li className="program-item">
-          <Link to="/breathingprogram4" className="navbar-link">
+          <Link to="/breathingprogram4" className="program-link">
             BreathingProgram4
           </Link>
         </li>
