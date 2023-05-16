@@ -41,7 +41,11 @@ export default function BreathingApp() {
   return (
     <div className="container">
       <div className={`circle ${currentPhase.toLowerCase()}`}>
-        <p className="timeLeft">{timeLeft}</p>
+        {currentPhase === "hold" ? (
+          <p className="timeLeft">|| {timeLeft}</p>
+        ) : (
+          <p className="timeLeft"> {timeLeft}</p>
+        )}
       </div>
       <h2>{currentPhase}</h2>
 

@@ -6,7 +6,7 @@ export default function Routes() {
   return (
     <Routes>
       <Route path="/about" element={<About />} />
-      <Route path="/breathingapp/" element={<BreathingApp />} />
+      <Route path="/breathingapp" element={<BreathingApp />} />
     </Routes>
   );
 }
