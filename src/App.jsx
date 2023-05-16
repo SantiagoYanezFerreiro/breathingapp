@@ -2,6 +2,11 @@ import { useState } from "react";
 import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
 import BreathingApp from "./components/BreathingApp";
 import About from "./components/About";
+import BreathingProgram1 from "./components/BreathingProgram1";
+import BreathingProgram2 from "./components/BreathingProgram2";
+import BreathingProgram3 from "./components/BreathingProgram3";
+import BreathingProgram4 from "./components/BreathingProgram4";
+
 import "./App.css";
 
 function App() {
@@ -15,7 +20,7 @@ function App() {
             Breathing App
           </Link>
         </li>
-        <li>
+        <li className="navbar-item">
           <Link to="/about" className="navbar-link">
             About
           </Link>
@@ -24,13 +29,46 @@ function App() {
     </nav>
   );
 
+  const ProgramSelection = () => (
+    <div className="program-selection">
+      <h2>Programs Available</h2>
+      <ul className="program-list">
+        <li className="program-item">
+          <Link to="/breathingprogram1" className="navbar-link">
+            BreathingProgram1
+          </Link>
+        </li>
+        <li className="navbar-item">
+          <Link to="/breathingprogram2" className="navbar-link">
+            BreathingProgram2
+          </Link>
+        </li>
+        <li className="program-item">
+          <Link to="/breathingprogram3" className="navbar-link">
+            BreathingProgram3
+          </Link>
+        </li>
+        <li className="program-item">
+          <Link to="/breathingprogram4" className="navbar-link">
+            BreathingProgram4
+          </Link>
+        </li>
+      </ul>
+    </div>
+  );
+
   return (
     <Router>
       <div>
         <Navigation />
+        <ProgramSelection />
         <Routes>
           <Route path="/breathingapp" element={<BreathingApp />} />
           <Route path="/about" element={<About />} />
+          <Route path="/breathingprogram1" element={<BreathingProgram1 />} />
+          <Route path="/breathingprogram2" element={<BreathingProgram2 />} />
+          <Route path="/breathingprogram3" element={<BreathingProgram3 />} />
+          <Route path="/breathingprogram4" element={<BreathingProgram4 />} />
         </Routes>
       </div>
     </Router>
