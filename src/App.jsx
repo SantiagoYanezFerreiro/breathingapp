@@ -8,13 +8,17 @@ function App() {
   const [count, setCount] = useState(0);
 
   const Navigation = () => (
-    <nav>
-      <ul>
-        <li>
-          <Link to="/breathingapp">Breathing App</Link>
+    <nav className="navbar">
+      <ul className="navbar-list">
+        <li className="navbar-item">
+          <Link to="/breathingapp" className="navbar-link">
+            Breathing App
+          </Link>
         </li>
         <li>
-          <Link to="/about">About</Link>
+          <Link to="/about" className="navbar-link">
+            About
+          </Link>
         </li>
       </ul>
     </nav>

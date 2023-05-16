@@ -40,9 +40,11 @@ export default function BreathingApp() {
 
   return (
     <div className="container">
-      <div className={`circle ${currentPhase.toLowerCase()}`}></div>
+      <div className={`circle ${currentPhase.toLowerCase()}`}>
+        <p className="timeLeft">{timeLeft}</p>
+      </div>
       <h2>{currentPhase}</h2>
-      <p>{timeLeft}</p>
+
       <div className="button-group">
         <button onClick={handleStartStop}>
           {isRunning ? "Stop Counter" : "Start Counter"}
