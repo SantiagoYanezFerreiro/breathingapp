@@ -98,7 +98,6 @@ function App() {
       <Navigation />
       {isProgramMenuOpen && <ProgramSelection />}
       <Routes>
-        <Route exact path="/" element={<BreathingApp />} />
         <Route path="/about" element={<About />} />
         <Route path="/breathingprogram1" element={<BreathingProgram1 />} />
         <Route path="/breathingprogram2" element={<BreathingProgram2 />} />
