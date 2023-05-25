@@ -22,6 +22,10 @@ function App() {
   const location = useLocation();
   const navigate = useNavigate();
 
+  const handleLinkClick = () => {
+    setProgramMenuOpen(false);
+  };
+
   const Navigation = () => (
     <nav className="navbar">
       <ul className="navbar-list">
@@ -31,16 +35,13 @@ function App() {
           </Link>
         </li>
         <li className="navbar-item">
-          <Link to="/about" className="navbar-link">
+          <Link to="/about" className="navbar-link" onClick={handleLinkClick}>
             About
           </Link>
         </li>
       </ul>
     </nav>
   );
-  const handleLinkClick = () => {
-    setProgramMenuOpen(false);
-  };
 
   useEffect(() => {
     if (location.pathname === "/") {
