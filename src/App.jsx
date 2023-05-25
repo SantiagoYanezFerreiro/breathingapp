@@ -26,8 +26,8 @@ function App() {
     <nav className="navbar">
       <ul className="navbar-list">
         <li className="navbar-item">
-          <Link to="/breathingapp" className="navbar-link">
-            Breathing App
+          <Link to="/" className="navbar-link">
+            Home
           </Link>
         </li>
         <li className="navbar-item">
@@ -98,6 +98,7 @@ function App() {
       <Navigation />
       {isProgramMenuOpen && <ProgramSelection />}
       <Routes>
+        <Route path="/breathingapp" element={<BreathingApp />} />
         <Route path="/about" element={<About />} />
         <Route path="/breathingprogram1" element={<BreathingProgram1 />} />
         <Route path="/breathingprogram2" element={<BreathingProgram2 />} />
