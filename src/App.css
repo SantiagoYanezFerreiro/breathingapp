@@ -42,6 +42,10 @@ button:active {
   background-color: #3e8e41;
 }
 
+.hidden {
+  display: none;
+}
+
 .circle {
   width: 200px;
   height: 200px;
