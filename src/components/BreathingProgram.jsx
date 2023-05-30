@@ -1,9 +1,17 @@
 import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
-export default function BreathingApp() {
+export default function BreathingProgram({
+  inhaleDuration,
+  holdDuration,
+  exhaleDuration,
+}) {
   const [currentPhase, setCurrentPhase] = React.useState("inhale");
-  const [timeLeft, setTimeLeft] = React.useState(4);
+  const [timeLeft, setTimeLeft] = React.useState(inhaleDuration);
   const [isRunning, setIsRunning] = React.useState(false);
+
+  const location = useLocation();
+  const programName = location.pathname.replace("/breathingprogram", "");
 
   const handleStartStop = () => {
     setIsRunning(!isRunning);
@@ -12,13 +20,13 @@ export default function BreathingApp() {
   const handleChangePhase = () => {
     if (currentPhase === "inhale") {
       setCurrentPhase("hold");
-      setTimeLeft(7);
+      setTimeLeft(holdDuration);
     } else if (currentPhase === "hold") {
       setCurrentPhase("exhale");
-      setTimeLeft(8);
+      setTimeLeft(exhaleDuration);
     } else if (currentPhase === "exhale") {
       setCurrentPhase("inhale");
-      setTimeLeft(4);
+      setTimeLeft(inhaleDuration);
     }
   };
 

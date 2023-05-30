@@ -7,13 +7,8 @@ import {
   useLocation,
   useNavigate,
 } from "react-router-dom";
-import BreathingApp from "./components/BreathingApp";
+import BreathingProgram from "./components/BreathingProgram";
 import About from "./components/About";
-import BreathingProgram1 from "./components/BreathingProgram1";
-import BreathingProgram2 from "./components/BreathingProgram2";
-import BreathingProgram3 from "./components/BreathingProgram3";
-import BreathingProgram4 from "./components/BreathingProgram4";
-
 import "./App.css";
 
 function App() {
@@ -99,12 +94,47 @@ function App() {
       <Navigation />
       {isProgramMenuOpen && <ProgramSelection />}
       <Routes>
-        <Route path="/breathingapp" element={<BreathingApp />} />
         <Route path="/about" element={<About />} />
-        <Route path="/breathingprogram1" element={<BreathingProgram1 />} />
-        <Route path="/breathingprogram2" element={<BreathingProgram2 />} />
-        <Route path="/breathingprogram3" element={<BreathingProgram3 />} />
-        <Route path="/breathingprogram4" element={<BreathingProgram4 />} />
+        <Route
+          path="/breathingprogram1"
+          element={
+            <BreathingProgram
+              inhaleDuration={8}
+              exhaleDuration={3}
+              holdDuration={2}
+            />
+          }
+        />
+        <Route
+          path="/breathingprogram2"
+          element={
+            <BreathingProgram
+              inhaleDuration={2}
+              exhaleDuration={1}
+              holdDuration={1}
+            />
+          }
+        />
+        <Route
+          path="/breathingprogram3"
+          element={
+            <BreathingProgram
+              inhaleDuration={9}
+              exhaleDuration={9}
+              holdDuration={9}
+            />
+          }
+        />
+        <Route
+          path="/breathingprogram4"
+          element={
+            <BreathingProgram
+              inhaleDuration={20}
+              exhaleDuration={20}
+              holdDuration={20}
+            />
+          }
+        />
       </Routes>
     </div>
   );
