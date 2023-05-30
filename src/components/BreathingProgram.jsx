@@ -5,13 +5,13 @@ export default function BreathingProgram({
   inhaleDuration,
   holdDuration,
   exhaleDuration,
+  programName,
 }) {
   const [currentPhase, setCurrentPhase] = React.useState("inhale");
   const [timeLeft, setTimeLeft] = React.useState(inhaleDuration);
   const [isRunning, setIsRunning] = React.useState(false);
 
   const location = useLocation();
-  const programName = location.pathname.replace("/breathingprogram", "");
 
   const handleStartStop = () => {
     setIsRunning(!isRunning);
@@ -48,6 +48,7 @@ export default function BreathingProgram({
 
   return (
     <div className="container">
+      <h1> {programName}</h1>
       <div className={`circle ${currentPhase.toLowerCase()}`}>
         {currentPhase === "hold" ? (
           <p className="timeLeft">|| {timeLeft}</p>

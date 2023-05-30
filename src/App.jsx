@@ -50,38 +50,38 @@ function App() {
         <ul className="program-grid">
           <li className="program-item">
             <Link
-              to="/breathingprogram1"
+              to="/RegularIntervals"
               className="program-link"
               onClick={handleLinkClick}
             >
-              BreathingProgram1
+              Regular Intervals
             </Link>
           </li>
           <li className="program-item">
             <Link
-              to="/breathingprogram2"
+              to="/BoxBreathing"
               className="program-link"
               onClick={handleLinkClick}
             >
-              BreathingProgram2
+              Box Breathing
             </Link>
           </li>
           <li className="program-item">
             <Link
-              to="/breathingprogram3"
+              to="/4-7-8Program"
               className="program-link"
               onClick={handleLinkClick}
             >
-              BreathingProgram3
+              4-7-8 Program
             </Link>
           </li>
           <li className="program-item">
             <Link
-              to="/breathingprogram4"
+              to="/BreathingHold"
               className="program-link"
               onClick={handleLinkClick}
             >
-              BreathingProgram4
+              Breathing Hold
             </Link>
           </li>
         </ul>
@@ -96,9 +96,10 @@ function App() {
       <Routes>
         <Route path="/about" element={<About />} />
         <Route
-          path="/breathingprogram1"
+          path="/RegularIntervals"
           element={
             <BreathingProgram
+              programName="Regular Intervals"
               inhaleDuration={8}
               exhaleDuration={3}
               holdDuration={2}
@@ -106,9 +107,10 @@ function App() {
           }
         />
         <Route
-          path="/breathingprogram2"
+          path="/BoxBreathing"
           element={
             <BreathingProgram
+              programName="Box Breathing"
               inhaleDuration={2}
               exhaleDuration={1}
               holdDuration={1}
@@ -116,9 +118,10 @@ function App() {
           }
         />
         <Route
-          path="/breathingprogram3"
+          path="/4-7-8Program"
           element={
             <BreathingProgram
+              programName="4-7-8 Program"
               inhaleDuration={9}
               exhaleDuration={9}
               holdDuration={9}
@@ -126,9 +129,10 @@ function App() {
           }
         />
         <Route
-          path="/breathingprogram4"
+          path="/BreathingHold"
           element={
             <BreathingProgram
+              programName="Breathing Hold"
               inhaleDuration={20}
               exhaleDuration={20}
               holdDuration={20}
