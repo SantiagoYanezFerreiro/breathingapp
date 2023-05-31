@@ -89,6 +89,23 @@ function App() {
     );
   };
 
+  const Footer = () => (
+    <nav className="navbar">
+      <ul className="navbar-list">
+        <li className="navbar-item">
+          <Link to="/" className="navbar-link">
+            Home
+          </Link>
+        </li>
+        <li className="navbar-item">
+          <Link to="/about" className="navbar-link" onClick={handleLinkClick}>
+            About
+          </Link>
+        </li>
+      </ul>
+    </nav>
+  );
+
   return (
     <div>
       <Navigation />
@@ -140,6 +157,7 @@ function App() {
           }
         />
       </Routes>
+      <Footer />
     </div>
   );
 }
