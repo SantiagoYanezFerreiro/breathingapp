@@ -185,9 +185,20 @@ button:hover {
 }
 
 .about-section-container {
-  margin: 5% 10%;
+  margin: 5% 15%;
+  padding: 20px;
+  background-color: #f5f5f5;
 }
 
 .text-section-heading {
   margin-bottom: 30px;
+  margin-top: 30px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.text-section-content {
+  font-size: 18px;
+  line-height: 2;
+  text-align: left;
 }
