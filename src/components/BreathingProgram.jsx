@@ -10,11 +10,18 @@ export default function BreathingProgram({
   const [currentPhase, setCurrentPhase] = React.useState("inhale");
   const [timeLeft, setTimeLeft] = React.useState(inhaleDuration);
   const [isRunning, setIsRunning] = React.useState(false);
+  const [isAnimated, setIsAnimated] = React.useState(false);
+  const [phaseCounter, setPhaseCounter] = React.useState({
+    inhale: 0,
+    hold: 0,
+    exhale: 0,
+  });
 
   const location = useLocation();
 
   const handleStartStop = () => {
     setIsRunning(!isRunning);
+    setIsAnimated(!isAnimated);
   };
 
   const handleChangePhase = () => {
@@ -41,28 +48,48 @@ export default function BreathingProgram({
 
     if (timeLeft === 0) {
       handleChangePhase();
+      setPhaseCounter((prevCounter) => ({
+        ...prevCounter,
+        [currentPhase]: prevCounter[currentPhase] + 1,
+      }));
     }
 
     return () => clearInterval(intervalId);
-  }, [isRunning, timeLeft]);
+  }, [isRunning, timeLeft, currentPhase]);
+
+  useEffect(() => {
+    if (
+      phaseCounter.inhale === 3 &&
+      phaseCounter.exhale === 3 &&
+      phaseCounter.hold === 3
+    ) {
+      setIsAnimated(false);
+      setIsRunning(false);
+      setTimeLeft(0);
+    }
+  }, [phaseCounter]);
 
   return (
     <div className="container">
-      <h1> {programName}</h1>
-      <div className={`circle ${currentPhase.toLowerCase()}`}>
-        {currentPhase === "hold" ? (
-          <p className="timeLeft">|| {timeLeft}</p>
+      <h1>{programName}</h1>
+      <div className={`circle ${isAnimated ? currentPhase : ""}`}>
+        {isAnimated &&
+        phaseCounter.inhale === 3 &&
+        phaseCounter.exhale === 3 &&
+        phaseCounter.hold === 3 ? (
+          <p className="timeLeft">Good Job</p>
         ) : (
-          <p className="timeLeft"> {timeLeft}</p>
+          <p className="timeLeft">
+            {currentPhase === "hold" ? `|| ${timeLeft}` : timeLeft}
+          </p>
         )}
       </div>
-      <h2>{currentPhase}</h2>
+      <h2 className="phasetext">{currentPhase}</h2>
 
       <div className="button-group">
-        <button onClick={handleStartStop}>
+        <button onClick={handleStartStop} className="startstopbtn">
           {isRunning ? "Stop Counter" : "Start Counter"}
         </button>
-        <button onClick={handleChangePhase}>Change Phase</button>
       </div>
     </div>
   );

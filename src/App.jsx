@@ -47,8 +47,8 @@ function App() {
     return (
       <div className={`program-selection ${isProgramMenuOpen ? "" : "hidden"}`}>
         <h2 className="program-heading">Programs Available</h2>
-        <ul className="program-grid">
-          <li className="program-item">
+        <div className="program-grid">
+          <div className="program-item">
             <Link
               to="/RegularIntervals"
               className="program-link"
@@ -56,8 +56,8 @@ function App() {
             >
               Regular Intervals
             </Link>
-          </li>
-          <li className="program-item">
+          </div>
+          <div className="program-item">
             <Link
               to="/BoxBreathing"
               className="program-link"
@@ -65,8 +65,8 @@ function App() {
             >
               Box Breathing
             </Link>
-          </li>
-          <li className="program-item">
+          </div>
+          <div className="program-item">
             <Link
               to="/4-7-8Program"
               className="program-link"
@@ -74,8 +74,8 @@ function App() {
             >
               4-7-8 Program
             </Link>
-          </li>
-          <li className="program-item">
+          </div>
+          <div className="program-item">
             <Link
               to="/BreathingHold"
               className="program-link"
@@ -83,8 +83,8 @@ function App() {
             >
               Breathing Hold
             </Link>
-          </li>
-        </ul>
+          </div>
+        </div>
       </div>
     );
   };
