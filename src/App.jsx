@@ -31,21 +31,36 @@ function App() {
     <nav className="navbar">
       <ul className="navbar-list">
         <li className="navbar-item">
-          <Link to="/" className="navbar-link">
+          <Link to="/" className="navbar-link" target="_blank">
             Home
           </Link>
         </li>
         <li className="navbar-item">
-          <Link to="/about" className="navbar-link" onClick={handleLinkClick}>
+          <Link
+            to="/about"
+            className="navbar-link"
+            onClick={handleLinkClick}
+            target="_blank"
+          >
             About
           </Link>
         </li>
 
         <li className="navbar-item right">
-          <Link to="/about" className="navbar-link" onClick={handleLinkClick}>
+          <Link
+            to="/about"
+            className="navbar-link"
+            onClick={handleLinkClick}
+            target="_blank"
+          >
             <i className="fas fa-heart section-icon"></i>
           </Link>
-          <Link to="/about" className="navbar-link" onClick={handleLinkClick}>
+          <Link
+            to="/about"
+            className="navbar-link"
+            onClick={handleLinkClick}
+            target="_blank"
+          >
             <i className="fas fa-cog section-icon"></i>
           </Link>
         </li>
@@ -108,16 +123,21 @@ function App() {
     <nav className="footer">
       <ul className="footer-list">
         <li className="footer-item">
-          <Link className="footer-link scroll-to-top" onClick={scrollToTop}>
+          <Link
+            className="footer-link scroll-to-top"
+            onClick={scrollToTop}
+            target="_blank"
+          >
             <i class="fas fa-arrow-up back-icon"></i>
           </Link>
         </li>
 
-        <li className="footer-item right">
+        <li className="footer-item">
           <Link
             to="/about"
             className="footer-link copyright-text"
             onClick={handleLinkClick}
+            target="_blank"
           >
             &copy; 2023 Your Website. All rights reserved.
           </Link>
@@ -127,6 +147,7 @@ function App() {
             to="https://www.instagram.com"
             className="footer-link"
             onClick={handleLinkClick}
+            target="_blank"
           >
             <FontAwesomeIcon className="social-icons" icon={faInstagram} />
           </Link>
@@ -134,6 +155,7 @@ function App() {
             to="https://www.twitter.com"
             className="footer-link"
             onClick={handleLinkClick}
+            target="_blank"
           >
             <FontAwesomeIcon className="social-icons" icon={faTwitter} />
           </Link>
@@ -141,6 +163,7 @@ function App() {
             to="https://www.facebook.com"
             className="footer-link"
             onClick={handleLinkClick}
+            target="_blank"
           >
             <FontAwesomeIcon className="social-icons" icon={faFacebook} />
           </Link>
