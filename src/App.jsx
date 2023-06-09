@@ -7,6 +7,12 @@ import {
   useLocation,
   useNavigate,
 } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faFacebook,
+  faTwitter,
+  faInstagram,
+} from "@fortawesome/free-brands-svg-icons";
 import BreathingProgram from "./components/BreathingProgram";
 import About from "./components/About";
 import "./App.css";
@@ -32,6 +38,15 @@ function App() {
         <li className="navbar-item">
           <Link to="/about" className="navbar-link" onClick={handleLinkClick}>
             About
+          </Link>
+        </li>
+
+        <li className="navbar-item right">
+          <Link to="/about" className="navbar-link" onClick={handleLinkClick}>
+            <i className="fas fa-heart section-icon"></i>
+          </Link>
+          <Link to="/about" className="navbar-link" onClick={handleLinkClick}>
+            <i className="fas fa-cog section-icon"></i>
           </Link>
         </li>
       </ul>
@@ -90,21 +105,71 @@ function App() {
   };
 
   const Footer = () => (
-    <nav className="navbar">
-      <ul className="navbar-list">
-        <li className="navbar-item">
-          <Link to="/" className="navbar-link">
-            Home
+    <nav className="footer">
+      <ul className="footer-list">
+        <li className="footer-item">
+          <Link className="footer-link scroll-to-top" onClick={scrollToTop}>
+            <i class="fas fa-arrow-up back-icon"></i>
           </Link>
         </li>
-        <li className="navbar-item">
-          <Link to="/about" className="navbar-link" onClick={handleLinkClick}>
-            About
+
+        <li className="footer-item right">
+          <Link
+            to="/about"
+            className="footer-link copyright-text"
+            onClick={handleLinkClick}
+          >
+            &copy; 2023 Your Website. All rights reserved.
+          </Link>
+        </li>
+        <li className="footer-item right">
+          <Link
+            to="https://www.instagram.com"
+            className="footer-link"
+            onClick={handleLinkClick}
+          >
+            <FontAwesomeIcon className="social-icons" icon={faInstagram} />
+          </Link>
+          <Link
+            to="https://www.twitter.com"
+            className="footer-link"
+            onClick={handleLinkClick}
+          >
+            <FontAwesomeIcon className="social-icons" icon={faTwitter} />
+          </Link>
+          <Link
+            to="https://www.facebook.com"
+            className="footer-link"
+            onClick={handleLinkClick}
+          >
+            <FontAwesomeIcon className="social-icons" icon={faFacebook} />
           </Link>
         </li>
       </ul>
     </nav>
   );
+
+  function scrollToTop() {
+    if (window.scrollY === 0) {
+      return;
+    }
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }
+
+  function handleScroll() {
+    const scrollToTopButton = document.querySelector(".scroll-to-top");
+    if (window.scrollY > 200) {
+      scrollToTopButton.style.display = "block";
+    } else {
+      scrollToTopButton.style.display = "none";
+    }
+  }
+
+  window.addEventListener("scroll", handleScroll);
 
   return (
     <div>
