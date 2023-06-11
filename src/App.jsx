@@ -15,6 +15,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import BreathingProgram from "./components/BreathingProgram";
 import About from "./components/About";
+import SupportUs from "./components/SupportUs";
 import "./App.css";
 
 function App() {
@@ -48,7 +49,7 @@ function App() {
 
         <li className="navbar-item right">
           <Link
-            to="/about"
+            to="/supportus"
             className="navbar-link"
             onClick={handleLinkClick}
             target="_blank"
@@ -199,6 +200,7 @@ function App() {
       <Navigation />
       {isProgramMenuOpen && <ProgramSelection />}
       <Routes>
+        <Route path="/supportus" element={<SupportUs />} />
         <Route path="/about" element={<About />} />
         <Route
           path="/RegularIntervals"
