@@ -111,6 +111,43 @@ body {
   justify-content: center;
   align-items: center;
   border-radius: 8px;
+  position: relative;
+}
+
+.color2 {
+  background-color: #f2c4d7;
+}
+
+.color3 {
+  background-color: #f5d1c9;
+}
+
+.color4 {
+  background-color: #c9e1f5;
+}
+
+.color5 {
+  background-color: #f5e6c9;
+}
+
+.color6 {
+  background-color: #6ac484;
+}
+
+.info-icon {
+  position: absolute;
+  font-size: 20px;
+  top: 10px;
+  right: 10px;
+  border-radius: 50%;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-icon i {
+  color: #fff;
 }
 
 .program-link {

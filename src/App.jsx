@@ -26,6 +26,7 @@ function App() {
 
   const handleLinkClick = () => {
     setProgramMenuOpen(false);
+    scrollToTop();
   };
 
   const Navigation = () => (
@@ -75,6 +76,9 @@ function App() {
     }
   }, [location]);
   const ProgramSelection = () => {
+    const handleInfoIconClick = (program) => {
+      navigate(`/about#${program}`, { state: { fromProgramSelection: true } });
+    };
     return (
       <div className={`program-selection ${isProgramMenuOpen ? "" : "hidden"}`}>
         <h2 className="program-heading">Programs Available</h2>
@@ -87,8 +91,14 @@ function App() {
             >
               Regular Intervals
             </Link>
+            <div
+              class="info-icon"
+              onClick={() => handleInfoIconClick("RegularIntervals")}
+            >
+              <i class="fas fa-info-circle"></i>
+            </div>
           </div>
-          <div className="program-item">
+          <div className="program-item color2">
             <Link
               to="/BoxBreathing"
               className="program-link"
@@ -96,8 +106,14 @@ function App() {
             >
               Box Breathing
             </Link>
+            <div
+              class="info-icon"
+              onClick={() => handleInfoIconClick("BoxBreathing")}
+            >
+              <i class="fas fa-info-circle"></i>
+            </div>
           </div>
-          <div className="program-item">
+          <div className="program-item color3">
             <Link
               to="/4-7-8Program"
               className="program-link"
@@ -105,8 +121,14 @@ function App() {
             >
               4-7-8 Program
             </Link>
+            <div
+              class="info-icon"
+              onClick={() => handleInfoIconClick("4-7-8Program")}
+            >
+              <i class="fas fa-info-circle"></i>
+            </div>
           </div>
-          <div className="program-item">
+          <div className="program-item color4">
             <Link
               to="/BreathingHold"
               className="program-link"
@@ -114,6 +136,42 @@ function App() {
             >
               Breathing Hold
             </Link>
+            <div
+              class="info-icon"
+              onClick={() => handleInfoIconClick("BreathingHold")}
+            >
+              <i class="fas fa-info-circle"></i>
+            </div>
+          </div>
+          <div className="program-item color5">
+            <Link
+              to="/BreathingHold"
+              className="program-link"
+              onClick={handleLinkClick}
+            >
+              Infinity Breathing
+            </Link>
+            <div
+              class="info-icon"
+              onClick={() => handleInfoIconClick("InfinityBreathing")}
+            >
+              <i class="fas fa-info-circle"></i>
+            </div>
+          </div>
+          <div className="program-item color6">
+            <Link
+              to="/BreathingHold"
+              className="program-link"
+              onClick={handleLinkClick}
+            >
+              Custom Breathing
+            </Link>
+            <div
+              class="info-icon"
+              onClick={() => handleInfoIconClick("CustomBreathing")}
+            >
+              <i class="fas fa-info-circle"></i>
+            </div>
           </div>
         </div>
       </div>
