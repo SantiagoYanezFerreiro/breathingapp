@@ -2,8 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { Route } from "react-router-dom";
 
-export default function About() {
-  const [fromProgramSelection, setFromProgramSelection] = useState(false);
+export default function About({ isProgramMenuOpen, setProgramMenuOpen }) {
   const location = useLocation();
 
   useEffect(() => {
@@ -14,9 +13,9 @@ export default function About() {
           behavior: "smooth",
         });
       }
-      setFromProgramSelection(true);
     }
   }, [location]);
+
   return (
     <div className="about-section-container">
       <h1 className="text-section-heading">About the Breathing App</h1>

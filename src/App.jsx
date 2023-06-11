@@ -78,6 +78,7 @@ function App() {
   const ProgramSelection = () => {
     const handleInfoIconClick = (program) => {
       navigate(`/about#${program}`, { state: { fromProgramSelection: true } });
+      setProgramMenuOpen(!isProgramMenuOpen);
     };
     return (
       <div className={`program-selection ${isProgramMenuOpen ? "" : "hidden"}`}>
@@ -95,7 +96,7 @@ function App() {
               class="info-icon"
               onClick={() => handleInfoIconClick("RegularIntervals")}
             >
-              <i class="fas fa-info-circle"></i>
+              <i className="fas fa-info-circle"></i>
             </div>
           </div>
           <div className="program-item color2">
@@ -110,7 +111,7 @@ function App() {
               class="info-icon"
               onClick={() => handleInfoIconClick("BoxBreathing")}
             >
-              <i class="fas fa-info-circle"></i>
+              <i className="fas fa-info-circle"></i>
             </div>
           </div>
           <div className="program-item color3">
@@ -125,7 +126,7 @@ function App() {
               class="info-icon"
               onClick={() => handleInfoIconClick("4-7-8Program")}
             >
-              <i class="fas fa-info-circle"></i>
+              <i className="fas fa-info-circle"></i>
             </div>
           </div>
           <div className="program-item color4">
@@ -137,7 +138,7 @@ function App() {
               Breathing Hold
             </Link>
             <div
-              class="info-icon"
+              className="info-icon"
               onClick={() => handleInfoIconClick("BreathingHold")}
             >
               <i class="fas fa-info-circle"></i>
@@ -152,7 +153,7 @@ function App() {
               Infinity Breathing
             </Link>
             <div
-              class="info-icon"
+              className="info-icon"
               onClick={() => handleInfoIconClick("InfinityBreathing")}
             >
               <i class="fas fa-info-circle"></i>
@@ -167,10 +168,10 @@ function App() {
               Custom Breathing
             </Link>
             <div
-              class="info-icon"
+              className="info-icon"
               onClick={() => handleInfoIconClick("CustomBreathing")}
             >
-              <i class="fas fa-info-circle"></i>
+              <i className="fas fa-info-circle"></i>
             </div>
           </div>
         </div>
@@ -187,7 +188,7 @@ function App() {
             onClick={scrollToTop}
             target="_blank"
           >
-            <i class="fas fa-arrow-up back-icon"></i>
+            <i className="fas fa-arrow-up back-icon"></i>
           </Link>
         </li>
 
@@ -242,24 +243,18 @@ function App() {
     });
   }
 
-  function handleScroll() {
-    const scrollToTopButton = document.querySelector(".scroll-to-top");
-    if (window.scrollY > 200) {
-      scrollToTopButton.style.display = "block";
-    } else {
-      scrollToTopButton.style.display = "none";
-    }
-  }
-
-  window.addEventListener("scroll", handleScroll);
-
   return (
     <div>
       <Navigation />
       {isProgramMenuOpen && <ProgramSelection />}
       <Routes>
         <Route path="/supportus" element={<SupportUs />} />
-        <Route path="/about" element={<About />} />
+        <Route
+          path="/about"
+          element={<About />}
+          isProgramMenuOpen={isProgramMenuOpen}
+          setProgramMenuOpen={setProgramMenuOpen}
+        />
         <Route
           path="/RegularIntervals"
           element={
