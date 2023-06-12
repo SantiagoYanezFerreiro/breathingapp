@@ -286,3 +286,28 @@ button:hover {
   line-height: 2;
   text-align: left;
 }
+
+summary {
+  outline: none;
+  font-weight: bold;
+}
+
+details {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+/* Styling the details content */
+details > * {
+  padding: 10px;
+}
+
+details > ul {
+  padding-left: 25px;
+}
+
+/* Styling the open state of the details element */
+details[open] {
+  background-color: #f0f0f0;
+}

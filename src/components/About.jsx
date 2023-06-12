@@ -34,6 +34,23 @@ export default function About({ isProgramMenuOpen, setProgramMenuOpen }) {
         and exhaling breaths at specific durations. This program helps regulate
         your breathing and promote a sense of calm and relaxation.
       </p>
+      <details className="text-section">
+        <summary className="text-section-content content-program-2">
+          Advantages
+        </summary>
+        <ul class="text-section-content">
+          <li>Promotes balanced breathing rhythm</li>
+          <li> Enhances relaxation and calmness</li>
+        </ul>
+      </details>
+      <details className="text-section">
+        <summary className="text-section-content">Cautions and Details</summary>
+        <ul class="text-section-content">
+          <li>Promotes balanced breathing rhythm</li>
+          <li> Enhances relaxation and calmness</li>
+          <li>Inhale 8 seconds/Exhale 3 Seconds/Hold 2 Seconds</li>
+        </ul>
+      </details>
       <h2 className="text-section-heading" id="BoxBreathing">
         Box Breathing
       </h2>
@@ -43,6 +60,21 @@ export default function About({ isProgramMenuOpen, setProgramMenuOpen }) {
         exhale, and hold again. This method promotes deep relaxation, stress
         reduction, and mental clarity.
       </p>
+      <details className="text-section">
+        <summary className="text-section-content">Advantages</summary>
+        <ul class="text-section-content">
+          <li>Induces deep relaxation and stress reduction</li>
+          <li>Improves mental clarity and focus</li>
+        </ul>
+      </details>
+      <details className="text-section">
+        <summary className="text-section-content">Cautions and Details</summary>
+        <ul class="text-section-content">
+          <li>May cause dizziness or light-headedness in some individuals</li>
+          <li> Avoid if you have a history of low blood pressure</li>
+          <li>Intervals: Inhale 2 Seconds/Exhale 1 Second/Hold 1 Second</li>
+        </ul>
+      </details>
       <h2 className="text-section-heading" id="4-7-8Program">
         4-7-8 Program
       </h2>
@@ -52,6 +84,22 @@ export default function About({ isProgramMenuOpen, setProgramMenuOpen }) {
         seconds. This program is renowned for its calming effect on the nervous
         system, reducing anxiety and inducing a state of tranquility.
       </p>
+      <details className="text-section">
+        <summary className="text-section-content">Advantages</summary>
+        <ul class="text-section-content">
+          <li>Calms the nervous system and reduces anxiety</li>
+          <li> Promotes tranquility and peacefulness</li>
+        </ul>
+      </details>
+      <details className="text-section">
+        <summary className="text-section-content">Cautions and Details</summary>
+        <ul class="text-section-content">
+          <li>Not recommended for individuals with breathing disorders</li>
+          <li> Avoid if you have respiratory conditions such as asthma</li>
+          <li>Intervals: Inhale 9 Seconds/Exhale 9 Second/Hold 9 Second</li>
+        </ul>
+      </details>
+
       <h2 className="text-section-heading" id="BreathingHold">
         Breathing Hold
       </h2>
@@ -61,6 +109,25 @@ export default function About({ isProgramMenuOpen, setProgramMenuOpen }) {
         inhale and exhale phases, allowing you to strengthen your respiratory
         system and improve your overall breathing efficiency.
       </p>
+      <details className="text-section">
+        <summary className="text-section-content">Advantages</summary>
+        <ul class="text-section-content">
+          <li>Increases breath control and lung capacity</li>
+          <li>Strengthens the respiratory system</li>
+        </ul>
+      </details>
+      <details className="text-section">
+        <summary className="text-section-content">Cautions and Details</summary>
+        <ul class="text-section-content">
+          <li>
+            Start with shorter breath-holding durations and gradually increase
+          </li>
+          <li> Avoid if you have any cardiovascular or pulmonary conditions</li>
+          <li>
+            Intervals: Inhale 20 Seconds/Exhale 20 Seconds/Hold 20 Seconds
+          </li>
+        </ul>
+      </details>
       <h2 className="text-section-heading" id="InfinityBreathing">
         Infinity Breathing
       </h2>
@@ -68,10 +135,31 @@ export default function About({ isProgramMenuOpen, setProgramMenuOpen }) {
         The Infinity Breathing program offers a dynamic and continuous breathing
         technique. It involves smoothly transitioning between inhaling and
         exhaling without any pauses or holds. This flowing breath pattern
-        promotes a sense of fluidity, balance, and mindfulness. Infinity
-        Breathing is a versatile program that can be adapted to different
-        durations and intensities based on your preferences and needs.
+        promotes a sense of fluidity, balance, and mindful
+        class="text-section-content"ness. Infinity Breathing is a versatile
+        program that can be adapted to different durations and intensities based
+        on your preferences and needs.
       </p>
+      <details className="text-section">
+        <summary className="text-section-content">Advantages</summary>
+        <ul class="text-section-content">
+          <li>Promotes a sense of fluidity and mindfulness</li>
+          <li> Enhances balance and relaxation</li>
+        </ul>
+      </details>
+      <details className="text-section">
+        <summary className="text-section-content">Cautions and Details</summary>
+        <ul class="text-section-content">
+          <li>
+            May not be suitable for individuals with respiratory conditions
+          </li>
+          <li>
+            {" "}
+            Adjust the intensity and duration based on your comfort level
+          </li>
+          <li>Intervals: Inhale 2 Seconds/Exhale 1 Second/Hold 1 Second</li>
+        </ul>
+      </details>
       <h2 className="text-section-heading" id="CustomBreathing">
         Custom Breathing
       </h2>
@@ -84,14 +172,28 @@ export default function About({ isProgramMenuOpen, setProgramMenuOpen }) {
         your practice to suit your individual goals, preferences, and current
         state of being.
       </p>
-
+      <details className="text-section">
+        <summary className="text-section-content">Advantages</summary>
+        <ul class="text-section-content">
+          <li>Allows personalized breathing experience</li>
+          <li> Tailor the practice to your goals and preferences</li>
+        </ul>
+      </details>
+      <details className="text-section">
+        <summary className="text-section-content">Cautions and Details</summary>
+        <ul class="text-section-content">
+          <li>Experiment with different patterns carefully</li>
+          <li> Pay attention to your body's response and adjust as needed</li>
+          <li> Customized durations based on individual preferences</li>
+        </ul>
+      </details>
       <h2 className="text-section-heading">Conclusions</h2>
       <p className="text-section-content content-program-6">
         Each breathing program offers a unique experience and benefits. Feel
         free to explore and experiment with different programs to find the one
         that resonates best with your goals and preferences.
       </p>
-      <p className="text-section-content">
+      <p className="text-section-content content-program-6">
         Remember, consistency is key when practicing breathing techniques. Make
         it a part of your daily routine to experience the long-term benefits
         these programs can bring to your overall well-being.
