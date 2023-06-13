@@ -269,6 +269,18 @@ button:hover {
   }
 }
 
+.gallery-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-container img {
+  height: 300px;
+  margin: 10px;
+  width: 380px;
+}
+
 .about-section-container {
   margin: 5% 15%;
   padding: 20px;
@@ -309,6 +321,29 @@ details > ul {
 }
 
 /* Styling the open state of the details element */
-details[open] {
-  background-color: #f0f0f0;
+details[open],
+.text-section-dropdown {
+  background-color: #2c3e50;
+  color: #fff;
+}
+
+.social-media-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  color: black;
+}
+
+.supportus-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.support-icon {
+  color: black;
+  font-size: 40px;
+  margin: 20px;
 }

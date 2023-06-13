@@ -33,17 +33,12 @@ function App() {
     <nav className="navbar">
       <ul className="navbar-list">
         <li className="navbar-item">
-          <Link to="/" className="navbar-link" target="_blank">
+          <Link to="/" className="navbar-link">
             Home
           </Link>
         </li>
         <li className="navbar-item">
-          <Link
-            to="/about"
-            className="navbar-link"
-            onClick={handleLinkClick}
-            target="_blank"
-          >
+          <Link to="/about" className="navbar-link" onClick={handleLinkClick}>
             About
           </Link>
         </li>
@@ -53,16 +48,10 @@ function App() {
             to="/supportus"
             className="navbar-link"
             onClick={handleLinkClick}
-            target="_blank"
           >
             <i className="fas fa-heart section-icon"></i>
           </Link>
-          <Link
-            to="/about"
-            className="navbar-link"
-            onClick={handleLinkClick}
-            target="_blank"
-          >
+          <Link to="/about" className="navbar-link" onClick={handleLinkClick}>
             <i className="fas fa-cog section-icon"></i>
           </Link>
         </li>

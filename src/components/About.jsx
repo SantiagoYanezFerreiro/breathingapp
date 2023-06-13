@@ -19,6 +19,21 @@ export default function About({ isProgramMenuOpen, setProgramMenuOpen }) {
   return (
     <div className="about-section-container">
       <h1 className="text-section-heading">About the Breathing App</h1>
+      <div className="gallery">
+        <div class="gallery-container">
+          <img
+            src="https://images.unsplash.com/photo-1602276507500-600178f63aae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YnJlYXRoaW5nfGVufDB8MHwwfHx8MA%3D%3D&auto=format&fit=crop&w=400&q=60"
+            alt="Image 1"
+            class="gallery-image"
+          />
+
+          <img
+            src="https://images.unsplash.com/photo-1536007164800-b7f11331f35c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8YnJlYXRoaW5nfGVufDB8MHwwfHx8MA%3D%3D&auto=format&fit=crop&w=400&q=60"
+            alt="Image 3"
+            class="gallery-image"
+          />
+        </div>
+      </div>
       <p className="text-section-content content-program-1">
         The Breathing App offers a selection of diverse breathing programs, each
         designed to provide unique benefits and cater to different needs. These
@@ -34,16 +49,16 @@ export default function About({ isProgramMenuOpen, setProgramMenuOpen }) {
         and exhaling breaths at specific durations. This program helps regulate
         your breathing and promote a sense of calm and relaxation.
       </p>
-      <details className="text-section">
+      <details className="text-section text-section-dropdown">
         <summary className="text-section-content content-program-2">
           Advantages
         </summary>
-        <ul class="text-section-content">
+        <ul class="text-section-content text-section-dropdown">
           <li>Promotes balanced breathing rhythm</li>
           <li> Enhances relaxation and calmness</li>
         </ul>
       </details>
-      <details className="text-section">
+      <details className="text-section text-section-dropdown">
         <summary className="text-section-content">Cautions and Details</summary>
         <ul class="text-section-content">
           <li>Promotes balanced breathing rhythm</li>
@@ -60,14 +75,14 @@ export default function About({ isProgramMenuOpen, setProgramMenuOpen }) {
         exhale, and hold again. This method promotes deep relaxation, stress
         reduction, and mental clarity.
       </p>
-      <details className="text-section">
+      <details className="text-section text-section-dropdown">
         <summary className="text-section-content">Advantages</summary>
-        <ul class="text-section-content">
+        <ul class="text-section-content text-section-dropdown">
           <li>Induces deep relaxation and stress reduction</li>
           <li>Improves mental clarity and focus</li>
         </ul>
       </details>
-      <details className="text-section">
+      <details className="text-section text-section-dropdown">
         <summary className="text-section-content">Cautions and Details</summary>
         <ul class="text-section-content">
           <li>May cause dizziness or light-headedness in some individuals</li>
@@ -84,14 +99,14 @@ export default function About({ isProgramMenuOpen, setProgramMenuOpen }) {
         seconds. This program is renowned for its calming effect on the nervous
         system, reducing anxiety and inducing a state of tranquility.
       </p>
-      <details className="text-section">
+      <details className="text-section text-section-dropdown">
         <summary className="text-section-content">Advantages</summary>
         <ul class="text-section-content">
           <li>Calms the nervous system and reduces anxiety</li>
           <li> Promotes tranquility and peacefulness</li>
         </ul>
       </details>
-      <details className="text-section">
+      <details className="text-section text-section-dropdown">
         <summary className="text-section-content">Cautions and Details</summary>
         <ul class="text-section-content">
           <li>Not recommended for individuals with breathing disorders</li>
@@ -109,14 +124,14 @@ export default function About({ isProgramMenuOpen, setProgramMenuOpen }) {
         inhale and exhale phases, allowing you to strengthen your respiratory
         system and improve your overall breathing efficiency.
       </p>
-      <details className="text-section">
+      <details className="text-section text-section-dropdown">
         <summary className="text-section-content">Advantages</summary>
         <ul class="text-section-content">
           <li>Increases breath control and lung capacity</li>
           <li>Strengthens the respiratory system</li>
         </ul>
       </details>
-      <details className="text-section">
+      <details className="text-section text-section-dropdown">
         <summary className="text-section-content">Cautions and Details</summary>
         <ul class="text-section-content">
           <li>
@@ -140,14 +155,14 @@ export default function About({ isProgramMenuOpen, setProgramMenuOpen }) {
         program that can be adapted to different durations and intensities based
         on your preferences and needs.
       </p>
-      <details className="text-section">
+      <details className="text-section text-section-dropdown">
         <summary className="text-section-content">Advantages</summary>
         <ul class="text-section-content">
           <li>Promotes a sense of fluidity and mindfulness</li>
           <li> Enhances balance and relaxation</li>
         </ul>
       </details>
-      <details className="text-section">
+      <details className="text-section text-section-dropdown">
         <summary className="text-section-content">Cautions and Details</summary>
         <ul class="text-section-content">
           <li>
@@ -172,14 +187,14 @@ export default function About({ isProgramMenuOpen, setProgramMenuOpen }) {
         your practice to suit your individual goals, preferences, and current
         state of being.
       </p>
-      <details className="text-section">
+      <details className="text-section text-section-dropdown">
         <summary className="text-section-content">Advantages</summary>
-        <ul class="text-section-content">
+        <ul class="text-section-content ">
           <li>Allows personalized breathing experience</li>
           <li> Tailor the practice to your goals and preferences</li>
         </ul>
       </details>
-      <details className="text-section">
+      <details className="text-section text-section-dropdown">
         <summary className="text-section-content">Cautions and Details</summary>
         <ul class="text-section-content">
           <li>Experiment with different patterns carefully</li>
