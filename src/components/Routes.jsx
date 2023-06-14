@@ -9,6 +9,7 @@ export default function Routes() {
     <Routes>
       <Route path="/about" element={<About />} />
       <Route path="/supportus" element={<SupportUs />} />
+      <Route path="/dashboard" element={<Dashboard />} />
       <Route path="/breathingprogram" element={<BreathingProgram />} />
       <Route path="/breathingprogram1" element={<BreathingProgram1 />} />
       <Route path="/breathingprogram2" element={<BreathingProgram2 />} />

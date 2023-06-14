@@ -16,6 +16,7 @@ import {
 import BreathingProgram from "./components/BreathingProgram";
 import About from "./components/About";
 import SupportUs from "./components/SupportUs";
+import Dashboard from "./components/Dashboard";
 import "./App.css";
 
 function App() {
@@ -51,7 +52,11 @@ function App() {
           >
             <i className="fas fa-heart section-icon"></i>
           </Link>
-          <Link to="/about" className="navbar-link" onClick={handleLinkClick}>
+          <Link
+            to="/dashboard"
+            className="navbar-link"
+            onClick={handleLinkClick}
+          >
             <i className="fas fa-cog section-icon"></i>
           </Link>
         </li>
@@ -229,6 +234,7 @@ function App() {
       {isProgramMenuOpen && <ProgramSelection />}
       <Routes>
         <Route path="/supportus" element={<SupportUs />} />
+        <Route path="/dashboard" element={<Dashboard />} />
         <Route
           path="/about"
           element={<About />}
