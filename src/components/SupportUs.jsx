@@ -20,7 +20,7 @@ export default function SupportUs() {
         to support you on your journey to tranquility.
       </p>
       <img
-        src="https://images.unsplash.com/photo-1536623975707-c4b3b2af565d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bWVkaXRhdGlvbnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=400&q=60"
+        src="https://images.unsplash.com/photo-1507120410856-1f35574c3b45?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGJyZWF0aGluZ3xlbnwwfDB8MHx8fDA%3D&auto=format&fit=crop&w=400&q=60"
         className="supportus-image"
       ></img>
       <h2 className="text-section-heading">Support Us</h2>
@@ -74,11 +74,10 @@ export default function SupportUs() {
         more people who can benefit from our resources.
       </p>
       <a href="https://play.google.com/store/apps/details?id=com.yourapp.package">
-        <img
-          className="supportus-image"
-          src="https://images.unsplash.com/photo-1633613286991-611fe299c4be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmV2aWV3fGVufDB8fDB8fHww&auto=format&fit=crop&w=400&q=60"
-          alt="Leave a Review on Google Play"
-        />
+        <p className="review-link">
+          &#9733;&#9733;&#9733;&#9733;&#9733; Give Us a Five Star Review Here
+          &#9733;&#9733;&#9733;&#9733;&#9733;
+        </p>
       </a>
 
       <p className="text-section-content">

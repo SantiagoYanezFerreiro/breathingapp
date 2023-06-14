@@ -172,11 +172,7 @@ function App() {
     <nav className="footer">
       <ul className="footer-list">
         <li className="footer-item">
-          <Link
-            className="footer-link scroll-to-top"
-            onClick={scrollToTop}
-            target="_blank"
-          >
+          <Link className="footer-link scroll-to-top" onClick={scrollToTop}>
             <i className="fas fa-arrow-up back-icon"></i>
           </Link>
         </li>

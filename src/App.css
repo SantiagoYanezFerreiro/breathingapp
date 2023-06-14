@@ -335,7 +335,8 @@ details[open],
   color: black;
 }
 
-.supportus-image {
+.supportus-image,
+.review-link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -346,4 +347,8 @@ details[open],
   color: black;
   font-size: 40px;
   margin: 20px;
+}
+
+.review-link {
+  font-size: 25px;
 }
