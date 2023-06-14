@@ -178,14 +178,9 @@ function App() {
         </li>
 
         <li className="footer-item">
-          <Link
-            to="/about"
-            className="footer-link copyright-text"
-            onClick={handleLinkClick}
-            target="_blank"
-          >
+          <p className="footer-link copyright-text">
             &copy; 2023 Your Website. All rights reserved.
-          </Link>
+          </p>
         </li>
         <li className="footer-item right">
           <Link
