@@ -7,8 +7,6 @@ import { userSessionsData } from "../../utils/Data";
 export default function Dashboard() {
   return (
     <div className="dashboard-container">
-      <h1>Dashboard Section</h1>
-
       <h2>Your General Stats</h2>
       <div className="dashboard-graph">
         <Line data={userSessionsData} />
