@@ -87,7 +87,7 @@ function App() {
               Regular Intervals
             </Link>
             <div
-              class="info-icon"
+              className="info-icon"
               onClick={() => handleInfoIconClick("RegularIntervals")}
             >
               <i className="fas fa-info-circle"></i>
@@ -102,7 +102,7 @@ function App() {
               Box Breathing
             </Link>
             <div
-              class="info-icon"
+              className="info-icon"
               onClick={() => handleInfoIconClick("BoxBreathing")}
             >
               <i className="fas fa-info-circle"></i>
@@ -117,7 +117,7 @@ function App() {
               4-7-8 Program
             </Link>
             <div
-              class="info-icon"
+              className="info-icon"
               onClick={() => handleInfoIconClick("4-7-8Program")}
             >
               <i className="fas fa-info-circle"></i>
@@ -135,7 +135,7 @@ function App() {
               className="info-icon"
               onClick={() => handleInfoIconClick("BreathingHold")}
             >
-              <i class="fas fa-info-circle"></i>
+              <i className="fas fa-info-circle"></i>
             </div>
           </div>
           <div className="program-item color5">
@@ -150,7 +150,7 @@ function App() {
               className="info-icon"
               onClick={() => handleInfoIconClick("InfinityBreathing")}
             >
-              <i class="fas fa-info-circle"></i>
+              <i className="fas fa-info-circle"></i>
             </div>
           </div>
           <div className="program-item color6">
