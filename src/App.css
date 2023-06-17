@@ -352,3 +352,19 @@ details[open],
 .review-link {
   font-size: 25px;
 }
+
+.dashboard-graph {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+canvas {
+  width: 500px !important;
+  height: 400px !important;
+}
+
+.dashboard-container {
+  margin-bottom: 100px;
+}
