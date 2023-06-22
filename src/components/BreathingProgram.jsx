@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import React, { useEffect } from "react";
+import PropTypes from "prop-types";
 
 export default function BreathingProgram({
   inhaleDuration,
@@ -17,28 +17,33 @@ export default function BreathingProgram({
     exhale: 0,
   });
 
-  const location = useLocation();
+  BreathingProgram.propTypes = {
+    inhaleDuration: PropTypes.number.isRequired,
+    holdDuration: PropTypes.number.isRequired,
+    exhaleDuration: PropTypes.number.isRequired,
+    programName: PropTypes.string.isRequired,
+  };
 
   const handleStartStop = () => {
     setIsRunning(!isRunning);
     setIsAnimated(!isAnimated);
   };
 
-  const handleChangePhase = () => {
-    if (currentPhase === "inhale") {
-      setCurrentPhase("hold");
-      setTimeLeft(holdDuration);
-    } else if (currentPhase === "hold") {
-      setCurrentPhase("exhale");
-      setTimeLeft(exhaleDuration);
-    } else if (currentPhase === "exhale") {
-      setCurrentPhase("inhale");
-      setTimeLeft(inhaleDuration);
-    }
-  };
-
   useEffect(() => {
     let intervalId;
+
+    const handleChangePhase = () => {
+      if (currentPhase === "inhale") {
+        setCurrentPhase("hold");
+        setTimeLeft(holdDuration);
+      } else if (currentPhase === "hold") {
+        setCurrentPhase("exhale");
+        setTimeLeft(exhaleDuration);
+      } else if (currentPhase === "exhale") {
+        setCurrentPhase("inhale");
+        setTimeLeft(inhaleDuration);
+      }
+    };
 
     if (isRunning && timeLeft > 0) {
       intervalId = setInterval(() => {
@@ -55,7 +60,14 @@ export default function BreathingProgram({
     }
 
     return () => clearInterval(intervalId);
-  }, [isRunning, timeLeft, currentPhase]);
+  }, [
+    isRunning,
+    timeLeft,
+    currentPhase,
+    holdDuration,
+    inhaleDuration,
+    exhaleDuration,
+  ]);
 
   useEffect(() => {
     if (
