@@ -224,19 +224,20 @@ button:hover {
   margin-top: 20px;
 }
 
-.inhale {
-  animation-name: inhaleAnimation;
+/* Animation styles for Program 1 */
+.program1-inhale {
+  animation-name: program1-inhaleAnimation;
 }
 
-.hold {
-  animation-name: holdAnimation;
+.program1-hold {
+  animation-name: program1-holdAnimation;
 }
 
-.exhale {
-  animation-name: exhaleAnimation;
+.program1-exhale {
+  animation-name: program1-exhaleAnimation;
 }
 
-@keyframes inhaleAnimation {
+@keyframes program1-inhaleAnimation {
   0% {
     transform: scale(0.8);
   }
@@ -248,7 +249,7 @@ button:hover {
   }
 }
 
-@keyframes holdAnimation {
+@keyframes program1-holdAnimation {
   0% {
     transform: scale(1);
   }
@@ -257,7 +258,7 @@ button:hover {
   }
 }
 
-@keyframes exhaleAnimation {
+@keyframes program1-exhaleAnimation {
   0% {
     transform: scale(1.2);
   }
@@ -269,6 +270,51 @@ button:hover {
   }
 }
 
+/* Animation styles for Program 2 */
+.program2-inhale {
+  animation-name: program2-inhaleAnimation;
+}
+
+.program2-hold {
+  animation-name: program2-holdAnimation;
+}
+
+.program2-exhale {
+  animation-name: program2-exhaleAnimation;
+}
+
+@keyframes program2-inhaleAnimation {
+  0% {
+    transform: translateX(-50%);
+  }
+  50% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(50%);
+  }
+}
+
+@keyframes program2-holdAnimation {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes program2-exhaleAnimation {
+  0% {
+    transform: translateX(50%);
+  }
+  50% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
 .gallery-container {
   display: flex;
   align-items: center;

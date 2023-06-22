@@ -68,11 +68,25 @@ export default function BreathingProgram({
       setTimeLeft(0);
     }
   }, [phaseCounter]);
+  // Define the animation class based on the program name
+  let animationClass = "";
+  if (programName === "Regular Intervals") {
+    animationClass = "program1-";
+  } else if (programName === "Box Breathing") {
+    animationClass = "program2-";
+  } else if (programName === "4-7-8 Program") {
+    animationClass = "program-4-7-8-animation";
+  } else if (programName === "Breathing Hold") {
+    animationClass = "program-breahold-animation";
+  }
 
   return (
     <div className="container">
       <h1>{programName}</h1>
-      <div className={`circle ${isAnimated ? currentPhase : ""}`}>
+      <div
+        className={`circle ${isAnimated ? animationClass + currentPhase : ""}`}
+      >
+        {" "}
         {isAnimated &&
         phaseCounter.inhale === 3 &&
         phaseCounter.exhale === 3 &&
