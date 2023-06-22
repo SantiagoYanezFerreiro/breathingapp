@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import { Route } from "react-router-dom";
 
-export default function About({ isProgramMenuOpen, setProgramMenuOpen }) {
+export default function About() {
   const location = useLocation();
 
   useEffect(() => {
@@ -20,17 +19,17 @@ export default function About({ isProgramMenuOpen, setProgramMenuOpen }) {
     <div className="about-section-container">
       <h1 className="text-section-heading">About the Breathing App</h1>
       <div className="gallery">
-        <div class="gallery-container">
+        <div className="gallery-container">
           <img
             src="https://images.unsplash.com/photo-1602276507500-600178f63aae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YnJlYXRoaW5nfGVufDB8MHwwfHx8MA%3D%3D&auto=format&fit=crop&w=400&q=60"
             alt="Image 1"
-            class="gallery-image"
+            className="gallery-image"
           />
 
           <img
             src="https://images.unsplash.com/photo-1536007164800-b7f11331f35c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8YnJlYXRoaW5nfGVufDB8MHwwfHx8MA%3D%3D&auto=format&fit=crop&w=400&q=60"
             alt="Image 3"
-            class="gallery-image"
+            className="gallery-image"
           />
         </div>
       </div>
@@ -53,14 +52,14 @@ export default function About({ isProgramMenuOpen, setProgramMenuOpen }) {
         <summary className="text-section-content content-program-2">
           Advantages
         </summary>
-        <ul class="text-section-content text-section-dropdown">
+        <ul className="text-section-content text-section-dropdown">
           <li>Promotes balanced breathing rhythm</li>
           <li> Enhances relaxation and calmness</li>
         </ul>
       </details>
       <details className="text-section text-section-dropdown">
         <summary className="text-section-content">Cautions and Details</summary>
-        <ul class="text-section-content">
+        <ul className="text-section-content">
           <li>Promotes balanced breathing rhythm</li>
           <li> Enhances relaxation and calmness</li>
           <li>Inhale 8 seconds/Exhale 3 Seconds/Hold 2 Seconds</li>
@@ -77,14 +76,14 @@ export default function About({ isProgramMenuOpen, setProgramMenuOpen }) {
       </p>
       <details className="text-section text-section-dropdown">
         <summary className="text-section-content">Advantages</summary>
-        <ul class="text-section-content text-section-dropdown">
+        <ul className="text-section-content text-section-dropdown">
           <li>Induces deep relaxation and stress reduction</li>
           <li>Improves mental clarity and focus</li>
         </ul>
       </details>
       <details className="text-section text-section-dropdown">
         <summary className="text-section-content">Cautions and Details</summary>
-        <ul class="text-section-content">
+        <ul className="text-section-content">
           <li>May cause dizziness or light-headedness in some individuals</li>
           <li> Avoid if you have a history of low blood pressure</li>
           <li>Intervals: Inhale 2 Seconds/Exhale 1 Second/Hold 1 Second</li>
@@ -101,14 +100,14 @@ export default function About({ isProgramMenuOpen, setProgramMenuOpen }) {
       </p>
       <details className="text-section text-section-dropdown">
         <summary className="text-section-content">Advantages</summary>
-        <ul class="text-section-content">
+        <ul className="text-section-content">
           <li>Calms the nervous system and reduces anxiety</li>
           <li> Promotes tranquility and peacefulness</li>
         </ul>
       </details>
       <details className="text-section text-section-dropdown">
         <summary className="text-section-content">Cautions and Details</summary>
-        <ul class="text-section-content">
+        <ul className="text-section-content">
           <li>Not recommended for individuals with breathing disorders</li>
           <li> Avoid if you have respiratory conditions such as asthma</li>
           <li>Intervals: Inhale 9 Seconds/Exhale 9 Second/Hold 9 Second</li>
@@ -126,14 +125,14 @@ export default function About({ isProgramMenuOpen, setProgramMenuOpen }) {
       </p>
       <details className="text-section text-section-dropdown">
         <summary className="text-section-content">Advantages</summary>
-        <ul class="text-section-content">
+        <ul className="text-section-content">
           <li>Increases breath control and lung capacity</li>
           <li>Strengthens the respiratory system</li>
         </ul>
       </details>
       <details className="text-section text-section-dropdown">
         <summary className="text-section-content">Cautions and Details</summary>
-        <ul class="text-section-content">
+        <ul className="text-section-content">
           <li>
             Start with shorter breath-holding durations and gradually increase
           </li>
@@ -150,21 +149,20 @@ export default function About({ isProgramMenuOpen, setProgramMenuOpen }) {
         The Infinity Breathing program offers a dynamic and continuous breathing
         technique. It involves smoothly transitioning between inhaling and
         exhaling without any pauses or holds. This flowing breath pattern
-        promotes a sense of fluidity, balance, and mindful
-        class="text-section-content"ness. Infinity Breathing is a versatile
-        program that can be adapted to different durations and intensities based
-        on your preferences and needs.
+        promotes a sense of fluidity, balance, and mindfulness. Infinity
+        Breathing is a versatile program that can be adapted to different
+        durations and intensities based on your preferences and needs.
       </p>
       <details className="text-section text-section-dropdown">
         <summary className="text-section-content">Advantages</summary>
-        <ul class="text-section-content">
+        <ul className="text-section-content">
           <li>Promotes a sense of fluidity and mindfulness</li>
           <li> Enhances balance and relaxation</li>
         </ul>
       </details>
       <details className="text-section text-section-dropdown">
         <summary className="text-section-content">Cautions and Details</summary>
-        <ul class="text-section-content">
+        <ul className="text-section-content">
           <li>
             May not be suitable for individuals with respiratory conditions
           </li>
@@ -189,16 +187,16 @@ export default function About({ isProgramMenuOpen, setProgramMenuOpen }) {
       </p>
       <details className="text-section text-section-dropdown">
         <summary className="text-section-content">Advantages</summary>
-        <ul class="text-section-content ">
+        <ul className="text-section-content ">
           <li>Allows personalized breathing experience</li>
           <li> Tailor the practice to your goals and preferences</li>
         </ul>
       </details>
       <details className="text-section text-section-dropdown">
         <summary className="text-section-content">Cautions and Details</summary>
-        <ul class="text-section-content">
+        <ul className="text-section-content">
           <li>Experiment with different patterns carefully</li>
-          <li> Pay attention to your body's response and adjust as needed</li>
+          <li> Pay attention to your body response and adjust as needed</li>
           <li> Customized durations based on individual preferences</li>
         </ul>
       </details>

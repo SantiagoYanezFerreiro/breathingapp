@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import {
-  BrowserRouter as Router,
   Route,
   Link,
   Routes,
@@ -20,7 +19,7 @@ import Dashboard from "./components/Dashboard";
 import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0);
+  //const [count, setCount] = useState(0);
   const [isProgramMenuOpen, setProgramMenuOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
